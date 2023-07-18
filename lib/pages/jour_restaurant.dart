@@ -32,6 +32,52 @@ class _JoursDuRestauState extends State<JoursDuRestau> {
               setState(() {
                 current = index;
               });
+              showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return Wrap(
+                    children: [
+                      current == 0
+                          ? const ListTile(
+                              leading: Icon(Icons.share),
+                              title: Text('Lundi'),
+                            )
+                          : current == 1
+                              ? const ListTile(
+                                  leading: Icon(Icons.share),
+                                  title: Text('Mardi'),
+                                )
+                              : current == 2
+                                  ? const ListTile(
+                                      leading: Icon(Icons.share),
+                                      title: Text('Mercredi'),
+                                    )
+                                  : current == 3
+                                      ? const ListTile(
+                                          leading: Icon(Icons.share),
+                                          title: Text('Jeudi'),
+                                        )
+                                      : current == 4
+                                          ? const ListTile(
+                                              leading: Icon(Icons.share),
+                                              title: Text('Vendredi'),
+                                            )
+                                          : current == 5
+                                              ? const ListTile(
+                                                  leading: Icon(Icons.share),
+                                                  title: Text('Samedi'),
+                                                )
+                                              : current == 6
+                                                  ? const ListTile(
+                                                      leading:
+                                                          Icon(Icons.share),
+                                                      title: Text('Dimanche'),
+                                                    )
+                                                  : const Text(""),
+                    ],
+                  );
+                },
+              );
             },
             child: Padding(
               padding: const EdgeInsets.only(
